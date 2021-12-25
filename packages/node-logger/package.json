@@ -1,0 +1,20 @@
+{
+  "name": "@ll1r1k/node-logger",
+  "version": "1.0.0",
+  "description": "NodeJS Logger",
+  "main": "src/logger.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node .",
+    "start:dev": "nodemon --inspect .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Llirik1337/ll1r1k1337.git",
+    "directory": "packages/node-logger"
+  },
+  "license": "ISC"
+}
