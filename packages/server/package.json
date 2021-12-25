@@ -2,12 +2,14 @@
   "name": "@ll1r1k/server",
   "version": "1.0.0",
   "description": "Native Server",
-  "main": "index.js",
+  "main": "src/server.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "start:dev": "nodemon --inspect .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
