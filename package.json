@@ -1,0 +1,23 @@
+{
+  "name": "ll1r1k",
+  "version": "1.0.0",
+  "workspaces": [
+    "./packages/*"
+  ],
+  "engines": {
+    "node": "^17.0.0"
+  },
+  "scripts": {
+    "test": "npm run test --prefix packages/*"
+  },
+  "author": "Aleshin K.V",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}
