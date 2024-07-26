@@ -18,15 +18,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint . --ext .ts",
-    "format": "prettier --write \"**/*.ts\"",
     "prepublishOnly": "npm run build"
-  },
-  "lint-staged": {
-    "**/*.{js,ts,json}": [
-      "eslint . --fix",
-      "prettier --write ."
-    ]
   },
   "author": "Llirik1337",
   "license": "MIT",

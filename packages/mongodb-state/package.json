@@ -18,19 +18,11 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint . --ext .ts",
-    "format": "prettier --write \"**/*.ts\"",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "mongodb": ">=6",
     "@ll1r1k/migration-tool": ">=1.0.0"
-  },
-  "lint-staged": {
-    "**/*.{js,ts,json}": [
-      "eslint . --fix",
-      "prettier --write ."
-    ]
   },
   "author": "Llirik1337",
   "license": "MIT",
