@@ -1,6 +1,6 @@
 {
   "name": "@ll1r1k/migration-tool",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package provide tools for migrations",
   "keywords": [
     "migration",
@@ -18,7 +18,10 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "preversion": "mkdir .git",
+    "version": "git add -A .",
+    "postversion": "git push && git push --tags && rmdir .git"
   },
   "author": "Llirik1337",
   "license": "MIT",
