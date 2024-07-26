@@ -1,0 +1,41 @@
+{
+  "name": "@ll1r1k/migration-tool",
+  "version": "1.0.0",
+  "description": "This package provide tools for migrations",
+  "keywords": [
+    "migration",
+    "tool",
+    "typescript",
+    "migrations",
+    "database",
+    "orm",
+    "orms",
+    "migrator",
+    "migrators"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"**/*.ts\"",
+    "prepublishOnly": "npm run build"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,json}": [
+      "eslint . --fix",
+      "prettier --write ."
+    ]
+  },
+  "author": "Llirik1337",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Llirik1337/ll1r1k1337.git",
+    "directory": "packages/migration-tool"
+  }
+}
