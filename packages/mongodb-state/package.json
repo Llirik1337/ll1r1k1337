@@ -20,6 +20,9 @@
     "test": "jest",
     "prepublishOnly": "npm run build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "mongodb": ">=6",
     "@ll1r1k/migration-tool": ">=1.0.0"
