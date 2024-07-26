@@ -2,6 +2,11 @@
   "name": "@ll1r1k/migration-tool",
   "version": "1.0.1",
   "description": "This package provide tools for migrations",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
     "migration",
     "tool",
@@ -18,10 +23,7 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "prepublishOnly": "npm run build",
-    "preversion": "mkdir .git",
-    "version": "git add -A .",
-    "postversion": "git push && git push --tags && rmdir .git"
+    "prepublishOnly": "npm run build"
   },
   "publishConfig": {
     "access": "public"

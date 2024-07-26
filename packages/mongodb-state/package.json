@@ -1,6 +1,6 @@
 {
   "name": "@ll1r1k/mongodb-state",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This package provide a state manager for MongoDB",
   "keywords": [
     "migration",
@@ -13,6 +13,11 @@
     "migrator",
     "migrators"
   ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -24,7 +29,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "mongodb": ">=6",
+    "mongodb": ">=5",
     "@ll1r1k/migration-tool": ">=1.0.0"
   },
   "author": "Llirik1337",
