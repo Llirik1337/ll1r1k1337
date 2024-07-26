@@ -1,6 +1,6 @@
 {
   "name": "@ll1r1k/mongodb-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package provide a state manager for MongoDB",
   "keywords": [
     "migration",
