@@ -1,8 +1,8 @@
-import { type Collection, MongoClient, type Document } from 'mongodb';
+import { type Collection, type MongoClient, type Document } from 'mongodb';
 import { type Migration, type State } from '@ll1r1k/migration-tool';
 
 export interface MongodbStateOptions {
-  url: string;
+  client: MongoClient;
   collection: string;
 }
 
@@ -13,15 +13,13 @@ type MigrationDocument = {
 
 export class MognodbState implements State {
   private collection!: Collection<MigrationDocument>;
-  private client!: MongoClient;
 
   private constructor(private readonly options: MongodbStateOptions) {}
 
   private async connect(): Promise<void> {
-    const { url, collection } = this.options;
-    this.client = new MongoClient(url);
-    await this.client.connect();
-    const db = this.client.db();
+    const { client, collection } = this.options;
+    await client.connect();
+    const db = client.db();
     this.collection = db.collection(collection);
     await this.collection.createIndex(
       { fileName: 1 },
@@ -92,6 +90,6 @@ export class MognodbState implements State {
   }
 
   async close(): Promise<void> {
-    await this.client.close(true);
+    await this.options.client.close(true);
   }
 }
